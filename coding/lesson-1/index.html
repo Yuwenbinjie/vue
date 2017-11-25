@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue.js</title>
+	<!-- 引入Vue cdn  不要放在body里面了 -->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- 实例化cdn dom标签的容器 借助react(虚拟DOM 不会操作真实的DOM 虚拟和真实dom有不一样会匹配 会刷新 javascript 会一直刷新) 和 angular-->
+   <div id="vue-app">
+   <!-- 字符串模板语法 -->
+   <h1>hello{{name}}</h1>
+   <h1> {{job}} </h1> 
+   <!-- 方法需要(实参) -->
+   <h1> {{greet('afternoon')}} </h1> 
+
+   	<!-- 属性绑定 以v开头的都是指令-->
+   	<a v-bind:href="website">
+   		web开发
+   	</a>
+   	<p v-html="websiteTag"></p>  
+   	<!-- v-html 后面是个标签 -->
+
+   	<input type="text" :value="name">
+   	<!-- <input type="text" v-bind:value="name"> 语法糖 和上面的值一样-->
+
+   </div>
+   
+   <!-- 自己写的js -->
+   <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue.js</title>
+	<!-- 引入 vue cdn -->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="vue-app1">
+	    <p>{{title}}</p>
+	    <h3>{{greet}}</h3>
+	</div>
+
+	<div id="vue-app2">
+	    <p>{{title}}</p>
+	    <h3>{{greet}}</h3>
+	    <button v-on:click="changevue1">click</button>
+	</div>
+
+	<!-- 自己写的js -->
+	<script src="app.js"></script>
+	<!-- 创建一个虚拟dom，当匹配到原dom中没有该元素，给原dom添加 -->
+</body>
+</html>

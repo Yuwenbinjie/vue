@@ -1,0 +1,17 @@
+span{
+	background: hotpink;
+	padding: 10px;
+	color: #fff;
+	display: inline-block;
+	margin: 10px 0;
+}
+.changeColor span{
+	background: red;
+}
+.changelength span:after{
+	content: "length";
+	margin-left: 10px;
+}
+/*.blue{
+	background: blue;
+}*/

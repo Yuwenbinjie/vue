@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue.js</title>
+   <link rel="stylesheet" href="css/style.css">
+	<!-- 引入Vue cdn  不要放在body里面了 -->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- 实例化cdn dom标签的容器 借助react(虚拟DOM 不会操作真实的DOM 虚拟和真实dom有不一样会匹配 会刷新 javascript 会一直刷新) 和 angular-->
+   <div id="vue-app">
+      <h1>计算属性Computed</h1>
+      <button @click="a++">Add to A</button>
+      <button @click="b++">Add to B</button>
+       <p>A-{{a}}</p>
+       <p>B-{{b}}</p>
+       <!-- <p>Age + A ={{addToA()}}</p>
+       <p>Age + B ={{addToB()}}</p> 
+       在Method里面使用--> 
+        <p>Age + A ={{addToA}}</p>
+       <p>Age + B ={{addToB}}</p>
+  </div>
+   
+   <!-- 自己写的js -->
+   <script src="app.js"></script>
+</body>
+</html>

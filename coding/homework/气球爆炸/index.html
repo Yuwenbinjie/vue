@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="vue-app">
+		<img src="img/p2.png" v-if="width>=100">
+		<img src="img/p1.png" v-else-if="width<100">
+		<div class="widthlen" v-bind:style="{width:width+'px'}">{{width}}</div>
+		<button v-on:click="width-=20">减长</button>
+		<button v-on:click="width=200">重置</button>
+	</div>
+	
+	<script src="app.js"></script>
+</body>
+</html>

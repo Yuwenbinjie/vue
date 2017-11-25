@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue.js</title>
+   <link rel="stylesheet" href="css/style.css">
+	<!-- 引入Vue cdn  不要放在body里面了 -->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- 实例化cdn dom标签的容器 借助react(虚拟DOM 不会操作真实的DOM 虚拟和真实dom有不一样会匹配 会刷新 javascript 会一直刷新) 和 angular-->
+   <div id="vue-app">
+      <h1>条件语句 v-if</h1>
+      <button v-on:click="error=!error">Toggle Error</button>
+      <button v-on:click="success=!success">Toggle Success</button>
+      <!-- <p v-if="error">网络连接失败:404</p>
+      <p v-else-if="success">网络连接成功:200</p> -->
+      <!-- 点失败 在点成功 值已经变了 再点失败 出现成功 -->
+
+       
+       
+     
+      <p v-show="error">网络连接失败:404</p>
+      <p v-show="success">网络连接成功:200</p>
+      <!-- display:none... 所以还在 只是隐藏了 -->
+      
+  </div>
+   
+   <!-- 自己写的js -->
+   <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue.js</title>
+   <link rel="stylesheet" href="css/style.css">
+	<!-- 引入Vue cdn  不要放在body里面了 -->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- 实例化cdn dom标签的容器 借助react(虚拟DOM 不会操作真实的DOM 虚拟和真实dom有不一样会匹配 会刷新 javascript 会一直刷新) 和 angular-->
+   <div id="vue-app">
+      <h1>双向数据绑定</h1>
+      <label for="">姓名:</label>
+      <!-- 这里改变 后面也变 -->
+     <!--  <input type="text" v-on:keyup="logName" v-bind:value="name" id="name" ref="name"> -->
+      <!-- 获取input里的Value -->
+      <input type="text" v-model="name">
+       <span>{{name}}</span>
+
+      <label for="">年龄:</label>
+      <!-- <input type="text" v-on:keyup="logAge" v-bind:value="age" ref="age" id="age"> -->
+      <input type="text" v-model="age">
+
+       <span>{{age}}</span>
+
+   </div>
+   
+   <!-- 自己写的js -->
+   <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue.js</title>
+	<!-- 引入 vue cdn -->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="vue-app">
+	     <div id="bag" v-bind:class="{burst:ended}"></div>
+	     <div id="bag-health">
+	     	<div v-bind:style="{width:health+'%'}"></div>
+	     </div>
+	     <div id="controls">
+	     	<button v-show="!ended" v-on:click="puch">敲打我</button>
+	     	<button v-on:click="restart">重新开始</button>
+	     </div>
+	</div>
+
+	<!-- 自己写的js -->
+	<script src="app.js"></script>
+	<!-- 创建一个虚拟dom，当匹配到原dom中没有该元素，给原dom添加 -->
+</body>
+</html>

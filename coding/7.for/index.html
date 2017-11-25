@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue.js</title>
+   <link rel="stylesheet" href="css/style.css">
+	<!-- 引入Vue cdn  不要放在body里面了 -->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- 实例化cdn dom标签的容器 借助react(虚拟DOM 不会操作真实的DOM 虚拟和真实dom有不一样会匹配 会刷新 javascript 会一直刷新) 和 angular-->
+   <div id="vue-app">
+      <h1>循环语句 v-for</h1>
+      <!-- {{colors[0]}} -->
+      <ul>
+         <li v-for="color in colors">
+            {{color}}
+         </li>
+      </ul>
+
+      <ul>
+         <li v-for="(user,index) in users">
+            {{index+1}}.{{user.name}}-{{user.age}}
+         </li>
+      </ul>
+
+      <template v-for="(user,index) in users">
+         <h3>{{index+1}}.{{user.name}}</h3>
+         <p>{{user.age}}</p>
+      </template>
+
+      <template v-for="(user,index) in users">
+         <div v-for="(val,key) in user">
+            <p>{{key}}-{{val}}</p>
+         </div>
+      </template>
+  </div>
+   
+   <!-- 自己写的js -->
+   <script src="app.js"></script>
+</body>
+</html>

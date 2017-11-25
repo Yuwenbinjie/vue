@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue.js</title>
+   <link rel="stylesheet" href="css/style.css">
+	<!-- 引入Vue cdn  不要放在body里面了 -->
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<!-- 实例化cdn dom标签的容器 借助react(虚拟DOM 不会操作真实的DOM 虚拟和真实dom有不一样会匹配 会刷新 javascript 会一直刷新) 和 angular-->
+   <div id="vue-app">
+      <h1>动态css样式</h1>
+      <h2>示例1</h2>
+      <!-- 尽量少使用id  red是类名-->
+      <!-- <div v-bind:class="{red:true,blue:true}">123</div> -->
+
+      <div v-on:click="lock=!lock" v-bind:class="{changeColor:lock}">
+      <span>Henry</span>
+      </div>
+
+      <h2>示例2</h2>
+      <button v-on:click="lock=!lock">改变颜色</button>
+      <button v-on:click="locklen=!locklen">改变长度</button>
+      <!-- <div v-bind:class="{changeColor:changeColor,changelength:changelength}"> -->
+      <div v-bind:class="compClasses">
+         <span>Henry</span>
+      </div>
+      
+     
+      
+      
+  </div>
+   
+   <!-- 自己写的js -->
+   <script src="app.js"></script>
+</body>
+</html>
